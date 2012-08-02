@@ -1,3 +1,6 @@
+<?php
+include "base.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -10,7 +13,7 @@
 		<!-- Le styles -->
 		<link href="stylesheets/bootstrap.css" rel="stylesheet">
 		<link href="stylesheets/bootstrap-responsive.css" rel="stylesheet">
-		<link rel="stylesheet/less" type="text/css" href="main.less">
+		<link rel="stylesheet/less" type="text/css" href="m.less">
 		<script src="js/less.js" type="text/javascript"></script>
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
@@ -52,22 +55,79 @@
 							The Place for Busy Students with Empty Pockets.
 						</p>
 						<p>
-							<a class="btn btn-primary btn-large">Join now!</a>
+							<a class="btn btn-primary btn-large" href="register.php">Join now!</a>
 						</p>
 					</div>
-					<div class="pull-right">
+					<div class="pull-right span4">
 						<form class="well">
-							<label>Username</label>
-							<input type="text" class="span3" placeholder="Type your username">
-							<label>Password</label>
-							<input type="password" class="span3" placeholder="Type your password">
-							<label class="checkbox">
-								<input type="checkbox">
-								Remember me </label>
-							<button type="submit" class="btn">
-								Log me in
+							<?php
+							if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
+							{
+							?>
+
+							<h1>Member Area</h1>
+							<p>
+								Thanks for logging in! You are <b><?=$_SESSION['Username'] ?><
+								b> and your email address is <b><?=$_SESSION['EmailAddress'] ?><
+								/b>.
+							</p>
+
+							<ul>
+								<li>
+									<a href="logout.php">Logout.</a>
+								</li>
+							</ul>
+
+							<?php
+							}
+							elseif(!empty($_POST['username']) && !empty($_POST['password']))
+							{
+							$username = mysql_real_escape_string($_POST['username']);
+							$password = md5(mysql_real_escape_string($_POST['password']));
+
+							$checklogin = mysql_query("SELECT * FROM users WHERE Username = '".$username."' AND Password = '".$password."'");
+
+							if(mysql_num_rows($checklogin) == 1)
+							{
+							$row = mysql_fetch_array($checklogin);
+							$email = $row['EmailAddress'];
+
+							$_SESSION['Username'] = $username;
+							$_SESSION['EmailAddress'] = $email;
+							$_SESSION['LoggedIn'] = 1;
+
+							echo "<h1>Success</h1>";
+							echo "<p>We are now redirecting you to the member area.</p>";
+							echo "<meta http-equiv='refresh' content='=2;contact.html' />";
+							}
+							else
+							{
+							echo "<h1>Error</h1>";
+							echo "<p>Sorry, your account could not be found. Please <a href=\"index.php\">click here to try again</a>.</p>";
+							}
+							}
+							else
+							{
+							?>
+
+							<h1>Member Login</h1>
+
+							<p>Thanks for visiting! Please login below.</p>
+
+							<form method="post" action="index.php" name="loginform" id="loginform">
+							<fieldset>
+							<label for="username">Username:</label><input type="text" name="username" id="username" class="span3"  placeholder="Type your username"/><br />
+							<label for="password">Password:</label><input type="password" name="password" id="password" class="span3" placeholder="Type your password"/><br />
+							<!--<input type="submit" name="login" id="login" value="Login" />-->
+							<button type="submit" class="btn" name="login" id="login" value="Login" >
+							Log me in
 							</button>
-						</form>
+							</fieldset>
+							</form>
+
+							<?php
+							}
+							?>
 					</div>
 				</div>
 				<p style="color: #0000A0">
@@ -129,5 +189,5 @@
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="http://code.jquery.com/jquery.min.js"></script>
 		<script src="js/bootstrap.js"></script>
-	</body>
+</body>
 </html>
