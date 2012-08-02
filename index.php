@@ -57,6 +57,7 @@ include "base.php";
 						<p>
 							<a class="btn btn-primary btn-large" href="register.php">Join now!</a>
 						</p>
+						<iframe width="336" height="189" src="http://www.youtube.com/embed/tAhdc8vMJHg" frameborder="0" allowfullscreen></iframe>
 					</div>
 					<div class="pull-right span4">
 						<form class="well">
@@ -119,9 +120,12 @@ include "base.php";
 							<label for="username">Username:</label><input type="text" name="username" id="username" class="span3"  placeholder="Type your username"/><br />
 							<label for="password">Password:</label><input type="password" name="password" id="password" class="span3" placeholder="Type your password"/><br />
 							<!--<input type="submit" name="login" id="login" value="Login" />-->
-							<button type="submit" class="btn" name="login" id="login" value="Login" >
+							<button type="submit" class="btn btn-primary" name="login" id="login" value="Login" >
 							Log me in
 							</button>
+							<label class="checkbox">
+							<input type="checkbox">
+							Remember me </label>
 							</fieldset>
 							</form>
 
@@ -180,7 +184,7 @@ include "base.php";
 		<hr>
 		<footer>
 			<p>
-				&copy; Tommy Pan Fang and JobColl 2012
+				&copy; JobColl 2012
 			</p>
 		</footer>
 		</div> <!-- /container -->
@@ -189,5 +193,5 @@ include "base.php";
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="http://code.jquery.com/jquery.min.js"></script>
 		<script src="js/bootstrap.js"></script>
-</body>
+	</body>
 </html>
