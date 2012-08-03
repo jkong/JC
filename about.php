@@ -1,6 +1,3 @@
-<?php
-include "navbar.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -18,30 +15,9 @@ include "navbar.php";
 		<![endif]-->
 	</head>
 	<body>
-		<!-- <div class="navbar navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
-					<a class="brand" href="index.html">Jobcoll</a>
-					<div class="nav-collapse">
-						<ul class="nav">
-							<li>
-								<a href="index.php">Home</a>
-							</li>
-							<li>
-								<a href="about.html">About</a>
-							</li>
-							<li>
-								<a href="contact.html">Contact</a>
-							</li>
-							<li>
-								<a href="jobform.html">Post!</a>
-							</li>
-						</ul>
-					</div><!--/.nav-collapse -->
-				<!--</div>
-			</div>
-		</div> -->
+	<?php
+	include_once('inc/navbar.inc.html');
+	?>
 		
 		<div class="container">
 			<!-- Main hero unit for a primary marketing message or call to action -->

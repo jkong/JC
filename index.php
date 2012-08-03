@@ -22,30 +22,9 @@ include "base.php";
 		<![endif]-->
 	</head>
 	<body>
-		<div class="navbar navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
-					<a class="brand" href="index.html">Jobcoll</a>
-					<div class="nav-collapse">
-						<ul class="nav">
-							<li>
-								<a href="index.html">Home</a>
-							</li>
-							<li>
-								<a href="about.html">About</a>
-							</li>
-							<li>
-								<a href="contact.html">Contact</a>
-							</li>
-							<li>
-								<a href="jobform.html">Post!</a>
-							</li>
-						</ul>
-					</div><!--/.nav-collapse -->
-				</div>
-			</div>
-		</div>
+	<?php 
+	include_once('inc/navbar.inc.html');
+	?>
 		<div class="container">
 			<!-- Main hero unit for a primary marketing message or call to action -->
 			<div class="hero-unit">
@@ -100,7 +79,7 @@ include "base.php";
 							echo "<h1>Success</h1>";
 							echo "<p>We are now redirecting you to the member area.</p>";
 							
-							echo "<meta http-equiv='refresh' content='=2;index.php' />";
+							echo "<meta http-equiv='refresh' content='2;index.php' />";
 							}
 							else
 							{
@@ -118,18 +97,12 @@ include "base.php";
 
 							<form method="post" action="index.php" name="loginform" id="loginform">
 							<fieldset>
-<<<<<<< HEAD
 							<label for="username">Username:</label><input type="text" name="username" id="username" class="span3"  placeholder="Type your username"/><br />
 							<label for="password">Password:</label><input type="password" name="password" id="password" class="span3" placeholder="Type your password"/><br />
 							<!--<input type="submit" name="login" id="login" value="Login" />-->
 							<button type="submit" class="btn btn-primary btn-large" name="login" id="login" value="Login" >
 							Log me in
 							</button>
-=======
-							<label for="username">Username:</label><input type="text" name="username" id="username" /><br />
-							<label for="password">Password:</label><input type="password" name="password" id="password" /><br />
-							<button class="btn btn-primary btn-large" type="submit" name="login" id="login" value="Login" /> log me in </button>
->>>>>>> 8bdc857afc10e55c0f981109f26b4c9ce2295126
 							</fieldset>
 							</form>
 
