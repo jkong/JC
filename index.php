@@ -98,7 +98,7 @@ include "base.php";
 
 							echo "<h1>Success</h1>";
 							echo "<p>We are now redirecting you to the member area.</p>";
-							echo "<meta http-equiv='refresh' content='=2;contact.html' />";
+							echo "<meta http-equiv='refresh' content='2;contact.html' />";
 							}
 							else
 							{
@@ -119,7 +119,7 @@ include "base.php";
 							<label for="username">Username:</label><input type="text" name="username" id="username" class="span3"  placeholder="Type your username"/><br />
 							<label for="password">Password:</label><input type="password" name="password" id="password" class="span3" placeholder="Type your password"/><br />
 							<!--<input type="submit" name="login" id="login" value="Login" />-->
-							<button type="submit" class="btn" name="login" id="login" value="Login" >
+							<button type="submit" class="btn btn-primary btn-large" name="login" id="login" value="Login" >
 							Log me in
 							</button>
 							</fieldset>
