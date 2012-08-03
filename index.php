@@ -4,6 +4,7 @@ include "base.php";
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta name="google-site-verification" content="B-rELLAyRf5kaXynTQldI32HBFNxVttzgksoT6AqWA8" />
 		<meta charset="utf-8">
 		<title> JobColl </title>
 		<link rel="icon" type="image/png" href = "jobcoll.png">
@@ -57,10 +58,9 @@ include "base.php";
 						<p>
 							<a class="btn btn-primary btn-large" href="register.php">Join now!</a>
 						</p>
-						<iframe width="336" height="189" src="http://www.youtube.com/embed/tAhdc8vMJHg" frameborder="0" allowfullscreen></iframe>
 					</div>
 					<div class="pull-right span4">
-						<form class="well">
+						<div id="main">
 							<?php
 							if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 							{
@@ -99,7 +99,7 @@ include "base.php";
 
 							echo "<h1>Success</h1>";
 							echo "<p>We are now redirecting you to the member area.</p>";
-							echo "<meta http-equiv='refresh' content='=2;contact.html' />";
+							echo "<meta http-equiv='refresh' content='=2;index.php' />";
 							}
 							else
 							{
@@ -117,21 +117,16 @@ include "base.php";
 
 							<form method="post" action="index.php" name="loginform" id="loginform">
 							<fieldset>
-							<label for="username">Username:</label><input type="text" name="username" id="username" class="span3"  placeholder="Type your username"/><br />
-							<label for="password">Password:</label><input type="password" name="password" id="password" class="span3" placeholder="Type your password"/><br />
-							<!--<input type="submit" name="login" id="login" value="Login" />-->
-							<button type="submit" class="btn btn-primary" name="login" id="login" value="Login" >
-							Log me in
-							</button>
-							<label class="checkbox">
-							<input type="checkbox">
-							Remember me </label>
+							<label for="username">Username:</label><input type="text" name="username" id="username" /><br />
+							<label for="password">Password:</label><input type="password" name="password" id="password" /><br />
+							<button class="btn btn-primary btn-large" type="submit" name="login" id="login" value="Login" /> log me in </button>
 							</fieldset>
 							</form>
 
 							<?php
 							}
 							?>
+						</div>
 					</div>
 				</div>
 				<p style="color: #0000A0">
