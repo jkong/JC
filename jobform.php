@@ -83,9 +83,9 @@
 			</div>
 			<hr>
 			<footer>
-				<p>
-					&copy; Jobcoll 2012
-				</p>
+				<?php
+			include_once ('inc/footer.inc.html');
+			?>
 			</footer>
 		</div>
 		<!-- /container -->

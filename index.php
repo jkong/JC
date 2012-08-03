@@ -83,8 +83,9 @@ include "base.php";
 
 							echo "<h1>Success</h1>";
 							echo "<p>We are now redirecting you to the member area.</p>";
-
-							echo "<meta http-equiv='refresh' content='2;index.php' />";
+	
+							// The comments on tutorial said that it should be content='2, not sure if that's the refresh problem	
+							echo "<meta http-equiv='refresh' content='=2;index.php' />";
 							}
 							else
 							{
@@ -161,9 +162,9 @@ include "base.php";
 		</div>
 		<hr>
 		<footer>
-			<p>
-				&copy; JobColl 2012
-			</p>
+			<?php
+			include_once ('inc/footer.inc.html');
+			?>
 		</footer>
 		</div> <!-- /container -->
 		<!-- Le javascript
