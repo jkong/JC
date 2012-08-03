@@ -4,6 +4,7 @@ include "base.php";
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta name="google-site-verification" content="B-rELLAyRf5kaXynTQldI32HBFNxVttzgksoT6AqWA8" />
 		<meta charset="utf-8">
 		<title> JobColl </title>
 		<link rel="icon" type="image/png" href = "jobcoll.png">
@@ -59,7 +60,7 @@ include "base.php";
 						</p>
 					</div>
 					<div class="pull-right span4">
-						<form class="well">
+						<div id="main">
 							<?php
 							if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 							{
@@ -98,7 +99,8 @@ include "base.php";
 
 							echo "<h1>Success</h1>";
 							echo "<p>We are now redirecting you to the member area.</p>";
-							echo "<meta http-equiv='refresh' content='2;contact.html' />";
+							
+							echo "<meta http-equiv='refresh' content='=2;index.php' />";
 							}
 							else
 							{
@@ -116,18 +118,25 @@ include "base.php";
 
 							<form method="post" action="index.php" name="loginform" id="loginform">
 							<fieldset>
+<<<<<<< HEAD
 							<label for="username">Username:</label><input type="text" name="username" id="username" class="span3"  placeholder="Type your username"/><br />
 							<label for="password">Password:</label><input type="password" name="password" id="password" class="span3" placeholder="Type your password"/><br />
 							<!--<input type="submit" name="login" id="login" value="Login" />-->
 							<button type="submit" class="btn btn-primary btn-large" name="login" id="login" value="Login" >
 							Log me in
 							</button>
+=======
+							<label for="username">Username:</label><input type="text" name="username" id="username" /><br />
+							<label for="password">Password:</label><input type="password" name="password" id="password" /><br />
+							<button class="btn btn-primary btn-large" type="submit" name="login" id="login" value="Login" /> log me in </button>
+>>>>>>> 8bdc857afc10e55c0f981109f26b4c9ce2295126
 							</fieldset>
 							</form>
 
 							<?php
 							}
 							?>
+						</div>
 					</div>
 				</div>
 				<p style="color: #0000A0">
@@ -180,7 +189,7 @@ include "base.php";
 		<hr>
 		<footer>
 			<p>
-				&copy; Tommy Pan Fang and JobColl 2012
+				&copy; JobColl 2012
 			</p>
 		</footer>
 		</div> <!-- /container -->
@@ -189,5 +198,5 @@ include "base.php";
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="http://code.jquery.com/jquery.min.js"></script>
 		<script src="js/bootstrap.js"></script>
-</body>
+	</body>
 </html>
