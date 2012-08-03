@@ -22,9 +22,9 @@ include "base.php";
 		<![endif]-->
 	</head>
 	<body>
-	<?php 
-	include_once('inc/navbar.inc.html');
-	?>
+		<?php
+		include_once ('inc/navbar.inc.html');
+		?>
 		<div class="container">
 			<!-- Main hero unit for a primary marketing message or call to action -->
 			<div class="hero-unit">
@@ -34,6 +34,11 @@ include "base.php";
 						<p>
 							The Place for Busy Students with Empty Pockets.
 						</p>
+						<iframe width="420" height="315" src="http://www.youtube.com/embed/HY9uZWCh4go" frameborder="0"></iframe>
+						<p style = "font-size: small; color: white">
+							Welcome to Jobcoll! Our job search website is made for college students.<br>
+							We hope to help students find short tasks that fit within their busy schedules.
+						</p>
 						<p>
 							<a class="btn btn-primary btn-large" href="register.php">Join now!</a>
 						</p>
@@ -41,21 +46,21 @@ include "base.php";
 					<div class="pull-right span4">
 						<div id="main">
 							<?php
-							if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
-							{
+						if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
+{
 							?>
 
 							<h1>Member Area</h1>
 							<p>
-								Thanks for logging in! You are <b><?=$_SESSION['Username'] ?><
-								b> and your email address is <b><?=$_SESSION['EmailAddress'] ?><
-								/b>.
+							Thanks for logging in! You are <b><?=$_SESSION['Username'] ?><
+							b> and your email address is <b><?=$_SESSION['EmailAddress'] ?><
+							/b>.
 							</p>
 
 							<ul>
-								<li>
-									<a href="logout.php">Logout.</a>
-								</li>
+							<li>
+							<a href="logout.php">Logout.</a>
+							</li>
 							</ul>
 
 							<?php
@@ -78,7 +83,7 @@ include "base.php";
 
 							echo "<h1>Success</h1>";
 							echo "<p>We are now redirecting you to the member area.</p>";
-							
+
 							echo "<meta http-equiv='refresh' content='2;index.php' />";
 							}
 							else
@@ -112,11 +117,6 @@ include "base.php";
 						</div>
 					</div>
 				</div>
-				<p style="color: #0000A0">
-					Welcome to Jobcoll! Our job search website is made for college students.
-					<br>
-					We hope to help students work on jobcolls (short tasks) that fit within their busy schedules.
-				</p>
 			</div>
 			<br>
 			<div class="row">
