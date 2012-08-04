@@ -36,7 +36,8 @@ include "base.php";
 						</p>
 						<iframe width="420" height="315" src="http://www.youtube.com/embed/HY9uZWCh4go" frameborder="0"></iframe>
 						<p style = "font-size: small; color: white">
-							Welcome to Jobcoll! Our job search website is made for college students.<br>
+							Welcome to Jobcoll! Our job search website is made for college students.
+							<br>
 							We hope to help students find short tasks that fit within their busy schedules.
 						</p>
 						<p>
@@ -46,7 +47,7 @@ include "base.php";
 					<div class="pull-right span4">
 						<div id="main">
 							<?php
-						if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
+if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 {
 							?>
 
@@ -83,9 +84,8 @@ include "base.php";
 
 							echo "<h1>Success</h1>";
 							echo "<p>We are now redirecting you to the member area.</p>";
-	
-							// The comments on tutorial said that it should be content='2, not sure if that's the refresh problem	
-							echo "<meta http-equiv='refresh' content='=2;index.php' />";
+
+							echo "<meta http-equiv='refresh' content='2;index.php' />";
 							}
 							else
 							{
@@ -160,12 +160,9 @@ include "base.php";
 			<div class="bar"
 			style="width: 2.5%;"></div>
 		</div>
-		<hr>
-		<footer>
-			<?php
-			include_once ('inc/footer.inc.html');
-			?>
-		</footer>
+		<?php
+		include_once ('inc/footer.inc.html');
+		?>
 		</div> <!-- /container -->
 		<!-- Le javascript
 		================================================== -->

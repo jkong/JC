@@ -4915,3 +4915,6 @@ blockquote small {
 .invisible {
   visibility: hidden;
 }
+#footer {
+	background:#222222	
+}

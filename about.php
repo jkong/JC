@@ -24,9 +24,9 @@
 			<div class="hero-unit">
 				<h1>Hello, World!</h1>
 				<p>
-					Welcome to Jobcoll! Our job search website is unique customized to for college students.
+					Welcome to Jobcoll! Our job search website is made for college students.
 					<br>
-					We hope to help students work on jobcolls (short tasks) that fits within their busy schedules.
+					We hope to find short tasks for students that fit within their busy schedules.
 				</p>
 				<p>
 					<a id = "learn more" class="btn btn-primary btn-large" href="javascript: void(0);"
@@ -39,18 +39,6 @@
 					Jobcoll is developing a website to find jobs for college students.
 					Our job search website is unique in both the types of jobs that are posted and the market that is being targeted.
 					We are targeting a niche group, College students, who will work on short-term jobs/gigs/tasks.
-					We will require that students register using a .edu e-mail account.
-					This process allows students to easily register with our website and begin working.
-					In addition, .edu accounts provides security for the party providing the job, as registered members will be required to post accurate information that holds them liable(name, address, etc.).
-					<br>
-					<br>
-					Any company or organization may register to post jobs on our website.
-					We envision most jobs that are posted being done by students in the local area.
-					<br>
-					<br>
-					Rather than posting only long-term jobs that require students to commit regular, substantial amounts of time,
-					Jobcoll/Timmit will focuse on projects that are less time consuming and which may be finished in a very brief time period
-					(directing a youtube video, DJ-ing, getting groceries, etc. ).
 					<br>
 					<a class="btn btn-primary btn-large" href="javascript: void(0);"
 					onclick="document.getElementById('learn more').style.display ='inline',
