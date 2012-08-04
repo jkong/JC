@@ -15,10 +15,10 @@
 		<![endif]-->
 	</head>
 	<body>
-	<?php
-	include_once('inc/navbar.inc.html');
-	?>
-		
+		<?php
+		include_once ('inc/navbar.inc.html');
+		?>
+
 		<div class="container">
 			<!-- Main hero unit for a primary marketing message or call to action -->
 			<div class="hero-unit">
@@ -45,12 +45,10 @@
 					document.getElementById('thinking').style.display ='none';"> Less &raquo;</a>
 				</p>
 			</div>
-			<hr>
-			<footer>
-				<?php
+
+			<?php
 			include_once ('inc/footer.inc.html');
 			?>
-			</footer>
 		</div>
 		<!-- /container -->
 		<!-- Le javascript
@@ -58,8 +56,8 @@
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script src="http://code.jquery.com/jquery.min.js"></script>
 		<script src="js/bootstrap.js"></script>
-	<?php
-	include_once('inc/footer.inc.html');
-	?>
+		<?php
+		include_once ('inc/footer.inc.html');
+		?>
 	</body>
 </html>

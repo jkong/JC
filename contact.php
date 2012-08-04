@@ -24,14 +24,12 @@
 				<h1>Contact</h1>
 				<p> Webmaster: info@jobcoll.com </p>
 			</div>
-			<hr>
-			<footer>
+
 				<?php
 			include_once ('inc/footer.inc.html');
 			?>
-			</footer>
-		</div>
-		<!-- /container -->
+
+		</div><!-- /container -->
 		<!-- Le javascript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
