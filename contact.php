@@ -15,30 +15,24 @@
 		<![endif]-->
 	</head>
 	<body>
-		<div id="wrapper">
-			<div id="header">
-				<?php
-include_once('inc/navbar.inc.html')
-				?>
-			</div>
-			<div class="container">
-				<div id="body">
-					<!-- Main hero unit for a primary marketing message or call to action -->
-					<div class="hero-unit">
-						<h1>Contact</h1>
-						<p>
-							Webmaster: info@jobcoll.com
-						</p>
-					</div>
+		<?php
+		include_once ('inc/navbar.inc.html');
+		?>
+		<div class="container">
+			<div id="body">
+				<!-- Main hero unit for a primary marketing message or call to action -->
+				<div class="hero-unit">
+					<h1>Contact</h1>
+					<p>
+						Webmaster: info@jobcoll.com
+					</p>
 				</div>
 			</div>
-			</div>
-			<div id="footer">
-				<?php
-				include_once ('inc/footer.inc.html');
-				?>
-			</div>
-		
+		</div>
+		<?php
+		include_once ('inc/footer.inc.html');
+		?>
+
 		<!-- /container -->
 		<!-- Le javascript
 		================================================== -->

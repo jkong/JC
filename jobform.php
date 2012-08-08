@@ -15,85 +15,77 @@
 		<![endif]-->
 	</head>
 	<body>
-		<div id="wrapper">
-			<div id="header">
-				<?php
-include_once('inc/navbar.inc.html')
-				?>
-			</div>
-			<!-- Main hero unit for a primary marketing message or call to action -->
-			<div class="container">
-				<div id="body">
-					<div class="hero-unit">
-						<h1>Post a Job!</h1>
-						<form class="well">
-							<label>What's your name? </label>
-							<input type="text" class="span3" placeholder="Last Name, First Name">
-							<span class="help-block">Let us Help us contact you</span>
-							<br>
-							<label>What kind of job are you posting?</label>
-							<select name="menu" size="1">
-								<option value="">Administrative <option value="">Athletic <option value="">Academic
-							</select>
-							<br>
-							<label>Budget</label>
-							<input type="range" min="0" max="100" step="1" value="0"
-							onchange="document.getElementById('display').innerHTML = this.value">
-							<span id="display">0</span>
-							<label>Duration</label>
-							<input type="range" min="0" max="5" step="1" value="0"
-							onchange="document.getElementById('display2').innerHTML = this.value">
-							<span id="display2">0</span>
-							<label>Expertise Level</label>
-							<input type="range" min="0" max="5" step="1" value="0"
-							onchange="document.getElementById('display3').innerHTML = this.value">
-							<span id="display3">0</span>
-							<label class="control-label" for="appendedPrependedInput">How much are you willing to pay?</label>
+		<?php
+		include_once ('inc/navbar.inc.html');
+		?>
+		<!-- Main hero unit for a primary marketing message or call to action -->
+		<div class="container">
+			<div id="body">
+				<div class="hero-unit">
+					<h1>Post a Job!</h1>
+					<form class="well">
+						<label>What's your name? </label>
+						<input type="text" class="span3" placeholder="Last Name, First Name">
+						<span class="help-block">Let us Help us contact you</span>
+						<br>
+						<label>What kind of job are you posting?</label>
+						<select name="menu" size="1">
+							<option value="">Administrative <option value="">Athletic <option value="">Academic
+						</select>
+						<br>
+						<label>Budget</label>
+						<input type="range" min="0" max="100" step="1" value="0"
+						onchange="document.getElementById('display').innerHTML = this.value">
+						<span id="display">0</span>
+						<label>Duration</label>
+						<input type="range" min="0" max="5" step="1" value="0"
+						onchange="document.getElementById('display2').innerHTML = this.value">
+						<span id="display2">0</span>
+						<label>Expertise Level</label>
+						<input type="range" min="0" max="5" step="1" value="0"
+						onchange="document.getElementById('display3').innerHTML = this.value">
+						<span id="display3">0</span>
+						<label class="control-label" for="appendedPrependedInput">How much are you willing to pay?</label>
+						<div class="controls">
+							<div class="input-prepend input-append">
+								<span class="add-on">$</span>
+								<input class="span2" id="appendedPrependedInput" size="16" type="text">
+								<span class="add-on">.00</span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inlineCheckboxes">Expertise Level</label>
 							<div class="controls">
-								<div class="input-prepend input-append">
-									<span class="add-on">$</span>
-									<input class="span2" id="appendedPrependedInput" size="16" type="text">
-									<span class="add-on">.00</span>
-								</div>
+								<label class="checkbox inline">
+									<input type="checkbox" id="inlineCheckbox1" value="option1">
+									Novice </label>
+								<label class="checkbox inline">
+									<input type="checkbox" id="inlineCheckbox2" value="option2">
+									Intermediate </label>
+								<label class="checkbox inline">
+									<input type="checkbox" id="inlineCheckbox3" value="option3">
+									Expert </label>
 							</div>
-							<div class="control-group">
-								<label class="control-label" for="inlineCheckboxes">Expertise Level</label>
-								<div class="controls">
-									<label class="checkbox inline">
-										<input type="checkbox" id="inlineCheckbox1" value="option1">
-										Novice </label>
-									<label class="checkbox inline">
-										<input type="checkbox" id="inlineCheckbox2" value="option2">
-										Intermediate </label>
-									<label class="checkbox inline">
-										<input type="checkbox" id="inlineCheckbox3" value="option3">
-										Expert </label>
-								</div>
-							</div>
-							<label>Contract Photo</label>
-							<input type="file" name="photo" accept="image/gif, image/jpeg, image/png">
-							</select>
-							<div class="form-actions">
-								<button type="submit" class="btn btn-primary">
-									Save changes
-								</button>
-								<button class="btn">
-									Cancel
-								</button>
-							</div>
-						</form>
-					</div>
+						</div>
+						<label>Contract Photo</label>
+						<input type="file" name="photo" accept="image/gif, image/jpeg, image/png">
+						</select>
+						<div class="form-actions">
+							<button type="submit" class="btn btn-primary">
+								Save changes
+							</button>
+							<button class="btn">
+								Cancel
+							</button>
+						</div>
+					</form>
 				</div>
 			</div>
-			<hr>
-			</div>
-			<div id="footer">
-				<?php
-				include_once ('inc/footer.inc.html');
-				?>
-			</div>
-		
-		<!-- /container -->
+		</div>
+		<hr>
+		<?php
+		include_once ('inc/footer.inc.html');
+		?> <!-- /container -->
 		<!-- Le javascript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
